@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+  font-family: "Roboto", sans-serif;
+  margin:0;
+  padding:0;
+}
+@keyframes flash {
+  0% {
+    scale:0.3;
+  }
+  20% {
+    scale:1;
+  }
+  40%{
+    scale:1.03;
+  }
+  60%{
+    scale:1.05;
+  }
+  80%{
+    scale:0.97;
+  }
+  100%{
+    scale:1
+  }
+}
+
+.zoom-flash {
+  animation: flash 2s infinite;
+}
+.menu li{
+  margin: 0;
+  padding:0;
+  width: 100%;
+ 
+  border-top: 1px solid #4d4d4d;
+  border-bottom: 1px solid #1a1a1a;
+}
+.menu li a{
+  padding: 15px 15px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
