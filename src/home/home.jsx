@@ -12,7 +12,7 @@ import AIServiceCard from './AIServiceCard'
 
 const Home = () => {
   return (
-   <>
+   <div style={{backgroundImage: "url(/images/bg.png)", height:'max-content'}}>
      <Header/>
      <TopBanner />
      <Features />
@@ -23,7 +23,7 @@ const Home = () => {
      <PricingCards />
      <SwarmNodeBanner/>
      <Footer/>
-   </>
+   </div>
   )
 }
 
