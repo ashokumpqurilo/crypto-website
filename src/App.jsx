@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import './App.css'
-import { BrowserRouter as Router , Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router , Routes, Route, useLocation } from 'react-router-dom'
 import Home from './home/home'
 import Login from './home/Login'
 import Register from './home/register'
@@ -21,14 +21,18 @@ import MyVectorStore from './components/Marketplace/MyVectorStore'
 import AllMarketePlace from './components/Marketplace/allMarketPlace'
 import TemplateView from './components/Marketplace/templateView'
 import PythonPage from './Pages/PythonPage'
+import AgentExecutorCronJobs from './pages/AgentExecutorCronJobs'
+import Resources from './pages/Resources'
+import Header from './components/Layout/Header'
 
 function App() {
  
- 
+  
   return (
     <>
     <Router>
       <Routes>
+        
         <Route path="/" element={<Home />} />
         <Route path='/login'  element={<Login />} />
         <Route path='/register'  element={<Register />} />
@@ -46,6 +50,7 @@ function App() {
         <Route path="/marketePlace" element={<AllMarketePlace />} />
         <Route path="/template" element={<TemplateView />} />
         <Route path="/python-sdk/*" element={<PythonPage />} />
+        <Route path="/resources/*" element={<Resources />} />
 
 
       </Routes>

@@ -5,7 +5,7 @@ const MarketplaceSidebarCommon = ({ children }) => {
   return (
     <>
       <div className="flex">
-        <div className="border-r border-gray-700 ">
+        <div className="border-r border-gray-400 ">
           <MarketplaceSidebar />
         </div>
         <div className="w-[calc(100%-256px)]">{children}</div>
