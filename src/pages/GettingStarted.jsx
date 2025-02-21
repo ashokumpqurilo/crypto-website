@@ -13,15 +13,14 @@ import Payload from "../components/getStart/GettiingStarted/Payload";
 import Logging from "../components/getStart/GettiingStarted/Logging";
 import ReturnValueSection from "../components/getStart/GettiingStarted/ReturnValueSection";
 import Headerdocument from "../common/Headerdocument";
-import Header from "../home/Header";
+import Header from "../components/Layout/Header";
 
 const GettingStarted = () => {
   return (
     <>
     {/* <Headerdocument /> */}
+      <Header/>
     <div className="w-full flex h-full">
-    <Header/>
-
       <GettingStartedSidebar />
       <main className="flex-1 ml-64 mr-64">
         <IntroSection />

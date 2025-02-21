@@ -1,8 +1,14 @@
 import React from 'react'
+import Breadcrumb from '../../../common/breadcrumb'
+import { BiHome } from 'react-icons/bi'
 
 const Intro = () => {
   return (
     <div  className="bg-white p-6 " id="data-storage">
+      <div className='flex'>
+      <BiHome />
+      {">"} <Breadcrumb title={"Getting Started"} />
+      </div>
       <h2 className="text-5xl font-bold mb-8">Data storage</h2>
       
       <p className="mb-4 text-gray-700">
