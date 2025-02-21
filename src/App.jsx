@@ -18,12 +18,13 @@ import CreateStore from './components/Marketplace/createStore'
 import MyStore from './components/Marketplace/myStore'
 import VectorStore from './components/Marketplace/vectorStore'
 import MyVectorStore from './components/Marketplace/MyVectorStore'
-import AllMarketePlace from './components/Marketplace/allMarketPlace'
+import AllMarketePlace from './components/Marketplace/AllMarketePlace'
 import TemplateView from './components/Marketplace/templateView'
 import PythonPage from './Pages/PythonPage'
 import AgentExecutorCronJobs from './pages/AgentExecutorCronJobs'
 import Resources from './pages/Resources'
 import Header from './components/Layout/Header'
+import MarketPlace from './pages/marketPlace'
 
 function App() {
  
@@ -41,13 +42,10 @@ function App() {
         <Route path='/list-all-agent-builder-jobs' element={<Listallagentbuilderjobs />} />
         <Route path="/getting-started" element={<GettingStarted />} />
         <Route path="/data-storage" element={<DataStorage />} />
-        <Route path="/marketplace" element={<CreateAgent />} />
-        <Route path="/agents" element={<Agents />} />
-        <Route path="/createStore" element={<CreateStore />} />
-        <Route path="/store" element={<MyStore />} />
-        <Route path="/createVectorStore" element={<VectorStore />} />
-        <Route path="/vectorstore" element={<MyVectorStore />} />
-        <Route path="/marketePlace" element={<AllMarketePlace />} />
+
+        
+        <Route path="/market-place/*" element={<MarketPlace />} />
+
         <Route path="/template" element={<TemplateView />} />
         <Route path="/python-sdk/*" element={<PythonPage />} />
         <Route path="/resources/*" element={<Resources />} />

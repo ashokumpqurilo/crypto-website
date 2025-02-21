@@ -112,7 +112,7 @@ const Agents = () => {
                 </div>
               </div>
               {showScript && (
-                <div className="bg-gray-700 p-3 rounded mt-2 text-gray-400">
+                <div className="bg-gray-200 p-3 rounded mt-2 text-gray-400">
                   <div className="relative">
                     <textarea
                       className="w-full h-40 p-3 pl-10 rounded font-mono"
@@ -139,14 +139,14 @@ const Agents = () => {
                 <div>
                   <button
                     onClick={() => setShowRequirements(!showRequirements)}
-                    className="mt-2 px-4 py-2 bg-blue-600 rounded-lg"
+                    className="mt-2 px-4 py-2 bg-gray-300 rounded-lg"
                   >
                     {showRequirements ? "Hide" : "Show"}
                   </button>
                 </div>
               </div>
               {showRequirements && (
-                <div className="bg-gray-700 p-3 rounded mt-2 text-gray-400">
+                <div className="bg-gray-200 p-3 rounded mt-2 text-gray-400">
                   <div className="relative">
                     <textarea
                       className="w-full h-40 p-3 pl-10 rounded font-mono"
@@ -173,14 +173,14 @@ const Agents = () => {
                 <div>
                   <button
                     onClick={() => setShowEnvVars(!showEnvVars)}
-                    className="mt-2 px-4 py-2 bg-blue-600 rounded-lg"
+                    className="mt-2 px-4 py-2 bg-gray-300 rounded-lg"
                   >
                     {showEnvVars ? "Hide" : "Show"}
                   </button>
                 </div>
               </div>{" "}
               {showEnvVars && (
-                <div className="bg-gray-700 p-3 rounded mt-2 text-gray-400">
+                <div className="bg-gray-200 p-3 rounded mt-2 text-gray-400">
                   <div className="relative">
                     <textarea
                       className="w-full h-40 p-3 pl-10 rounded font-mono"

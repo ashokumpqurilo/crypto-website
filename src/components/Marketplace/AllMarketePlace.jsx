@@ -15,21 +15,21 @@ const templates = [
   { title: "Crypto Twitter Sentiment Monitor", description: "Uses Tweepy library to fetch tweets with mentioned accounts and analyze their sentiment." }
 ];
 
-const App = () => {
+const AllMarketePlace = () => {
   const [selectedBounty, setSelectedBounty] = useState(null);
     const navigate = useNavigate()
   return (
     <MarketplaceSidebarCommon>
 
-    <div className="p-4 bg-gray-900 min-h-screen text-white">
+    <div className="p-4 bg-gray-100 min-h-screen ">
       <section>
         <h2 className="text-2xl font-bold">Bounties</h2>
         <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4 mt-4">
           {bounties.map((bounty, index) => (
-            <div key={index} className="bg-gray-800 p-4 rounded-lg shadow-lg cursor-pointer" onClick={() => setSelectedBounty(bounty)}>
+            <div key={index} className="bg-gray-200 p-4 rounded-lg shadow-lg cursor-pointer" onClick={() => setSelectedBounty(bounty)}>
               <h3 className="text-green-400 font-bold">{bounty.reward}</h3>
-              <h4 className="mt-2 font-semibold">{bounty.title}</h4>
-              <p className="text-gray-400 text-sm mt-2">{bounty.description}</p>
+              <h4 className="mt-2 font-semibold text-black">{bounty.title}</h4>
+              <p className="text-gray-900 text-sm mt-2">{bounty.description}</p>
             </div>
           ))}
         </div>
@@ -39,9 +39,9 @@ const App = () => {
         <h2 className="text-2xl font-bold">Templates</h2>
         <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-4 mt-4">
           {templates.map((template, index) => (
-            <div key={index} className="bg-gray-800 p-4 rounded-lg shadow-lg">
-              <h4 className="text-blue-400 font-semibold">{template.title}</h4>
-              <p className="text-gray-400 text-sm mt-2">{template.description}</p>
+            <div key={index} className="bg-gray-200 p-4 rounded-lg shadow-lg">
+              <h4 className="text-green-400 font-semibold">{template.title}</h4>
+              <p className="text-black text-sm mt-2">{template.description}</p>
               <div className="flex justify-between mt-4">
                 <button className="text-blue-400">View</button>
                 <button className="bg-blue-500 px-3 py-1 rounded text-white" onClick={()=>navigate("/marketplace")}>Use Template</button>
@@ -53,10 +53,10 @@ const App = () => {
 
       {selectedBounty && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-gray-800 p-6 rounded-lg shadow-lg max-w-md">
+          <div className="bg-gray-200 p-6 rounded-lg shadow-lg max-w-md">
             <h3 className="text-green-400 font-bold">{selectedBounty.reward}</h3>
             <h4 className="mt-2 font-semibold">{selectedBounty.title}</h4>
-            <p className="text-gray-400 text-sm mt-2">{selectedBounty.description}</p>
+            <p className="text-gray-900 text-sm mt-2">{selectedBounty.description}</p>
             <button onClick={() => setSelectedBounty(null)} className="mt-4 bg-red-500 px-3 py-1 rounded text-white">Close</button>
           </div>
         </div>
@@ -67,4 +67,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default AllMarketePlace;
