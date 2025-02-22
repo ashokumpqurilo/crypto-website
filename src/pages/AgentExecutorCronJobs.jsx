@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import LeftSidebar from "../components/Layout/Python/LeftSidebar";
-import Schema from "../components/Resources/AgentExecutorCronJobs/Schema";
+import Schema from "../components/common/Schema";
 import RightSide from "../containers/RightSide/RightSide";
 const AgentExecutorCronJobs = () => {
   return (

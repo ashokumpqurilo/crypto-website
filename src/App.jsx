@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import './App.css'
+import './index.css'
 import { BrowserRouter as Router , Routes, Route, useLocation } from 'react-router-dom'
 import Home from './home/home'
 import Login from './home/Login'
@@ -16,13 +16,25 @@ import TemplateView from './components/Marketplace/templateView'
 import PythonPage from './Pages/PythonPage'
 import Resources from './pages/Resources'
 import MarketPlace from './pages/marketPlace'
+import ApiReference from './pages/ApiReference'
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return null;
+};
 function App() {
  
-  
+
   return (
     <>
     <Router>
+    <ScrollToTop />
+
       <Routes>
         
         <Route path="/" element={<Home />} />
@@ -37,6 +49,7 @@ function App() {
         <Route path="/template" element={<TemplateView />} />
         <Route path="/python-sdk/*" element={<PythonPage />} />
         <Route path="/resources/*" element={<Resources />} />
+        <Route path="/api-reference/*" element={<ApiReference />} />
 
 
       </Routes>
