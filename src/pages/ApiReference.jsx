@@ -105,7 +105,7 @@ const ApiReference = () => {
     
     <div className=" flex w-full !overflow-x-hidden  "  >
 
-        {/* <LeftSidebar data={navigationConfig} /> */}
+        <LeftSidebar data={navigationConfig} />
           {(path === '/api-reference/introduction' || path === '/api-reference/introduction/') && <ApiReferenceIntroduction />}
           {(path === '/api-reference/authentication' || path === '/api-reference/authentication/') && <ApiReferenceAuthentication />}
           {(path === '/api-reference/list-all-agent-builder-jobs' || path === '/api-reference/list-all-agent-builder-jobs/') && <ListAgentBuilderJobs />}

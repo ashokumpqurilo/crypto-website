@@ -35,7 +35,7 @@ const LeftSidebar = ({ data }) => {
   };
 
   return (
-    <div className="!w-[20%] min-h-screen  border-r p-4 bg-white ">
+    <div className="!w-[20%] hidden lg:block min-h-screen  border-r p-4 bg-white ">
       {/* Top level links */}
       {data.topLinks.map((link) => (
         <NavLink key={link.to} to={link.to}>  

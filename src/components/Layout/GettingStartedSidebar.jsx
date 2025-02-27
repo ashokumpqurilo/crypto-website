@@ -5,7 +5,7 @@ const GettingStartedSidebar = () => {
   const location = useLocation();
 
   return (
-    <div className="fixed left-0 top-14 w-64 h-full border-r p-4 bg-white">
+    <div className="fixed  left-0 top-14 w-64 h-full border-r p-4 bg-white hidden lg:block">
       <nav className="space-y-4">
         <div>
           <h3 className="font-medium text-gray-800 mb-2">Documentation</h3>

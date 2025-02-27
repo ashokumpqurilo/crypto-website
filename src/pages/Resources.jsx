@@ -122,7 +122,7 @@ const Resources = () => {
       <Header/>
         <div className=" flex " style={{maxWidth: "100vw" , overflowX: "hidden"}}>
         <LeftSidebar data={data}/>
-        <main className="flex max-w-[calc(100vw-300px)] overflow-x-hidden">
+        <main className="flex w-full  lg:max-w-[calc(100vw-300px)] overflow-x-hidden">
         {(path === '/resources/agentBuilderJob' || path === '/resources/agentBuilderJob/') && <AgentBuilderJob />}
           {(path === '/resources/listallagent' || path === '/resources/listallagent/') && <ListAllAgent />}
           {(path === '/resources/retrieveanagent' || path === '/resources/retrieveanagent/') && <RetrieveAnAgent />}

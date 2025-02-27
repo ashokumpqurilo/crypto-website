@@ -22,7 +22,7 @@ const GettingStarted = () => {
       <Header/>
     <div className="w-full flex h-full">
       <GettingStartedSidebar />
-      <main className="flex-1 ml-64 mr-64">
+      <main className="flex-1 lg:ml-64 lg:mr-64 w-full  lg:w-auto">
         <IntroSection />
         <Script />
         <Requirements />

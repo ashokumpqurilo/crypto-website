@@ -48,7 +48,7 @@ const CodeBlock = ({ content,className }) => {
           </svg>
         )}
       </button>
-      <pre>{content}</pre>
+      <pre className="overflow-x-scroll w-full">{content}</pre>
     </div>
   );
 };

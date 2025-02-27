@@ -115,7 +115,7 @@ const GettingStartedRightSidebar = () => {
   };
 
   return (
-    <div className="fixed right-0 top-14 w-64 h-full border-l p-4 bg-white">
+    <div className="fixed hidden lg:block right-0 top-14 w-64 h-full border-l p-4 bg-white">
       <nav className="space-y-2">
         {currentNavigation?.items.map((section) => (
           <div key={section.id}>

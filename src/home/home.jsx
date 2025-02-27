@@ -16,7 +16,7 @@ const Home = () => {
      <Header/>
      <TopBanner />
      <Features />
-     <SwarmNodeBounties />
+     {/* <SwarmNodeBounties /> */}
      <Templates />
      <AIServiceCard />
      <Documentation />

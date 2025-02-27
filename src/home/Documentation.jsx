@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Heading from "../common/Heading";
 
 const Documentation = () => {
@@ -27,26 +28,26 @@ const Documentation = () => {
               className="w-[90%] max-w-[300px] md:max-w-[350px] lg:max-w-[400px]"
             />
           </div>
-        
         </div>
       </div>
+      
       <div className="flex flex-wrap gap-4 sm:gap-6 items-center justify-center px-6 sm:px-12 md:px-20 lg:px-32 xl:px-40 mt-12">
-  <button className="w-full sm:w-[180px] px-6 py-2 text-white text-lg font-medium rounded-full bg-gradient-to-r from-[#B20CC1] to-[#0D041F] shadow-lg hover:opacity-80 transition">
-    Getting Started
-  </button>
+        <Link to="/getting-started" className="w-full sm:w-[180px] px-6 py-2 text-white text-lg font-medium rounded-full bg-gradient-to-r from-[#B20CC1] to-[#0D041F] shadow-lg hover:opacity-80 transition">
+          Getting Started
+        </Link>
 
-  <button className="w-full sm:w-[280px] px-6 py-2 text-white text-lg font-medium rounded-full bg-gradient-to-r from-[#B20CC1] to-[#0D041F] shadow-lg hover:opacity-80 transition">
-    API Documentation
-  </button>
+        <Link to="/api-reference/introduction" className="w-full sm:w-[280px] px-6 py-2 text-white text-lg font-medium rounded-full bg-gradient-to-r from-[#B20CC1] to-[#0D041F] shadow-lg hover:opacity-80 transition">
+          API Documentation
+        </Link>
 
-  <button className="w-full sm:w-[180px] px-6 py-2 text-white text-lg font-medium rounded-full bg-gradient-to-r from-[#B20CC1] to-[#0D041F] shadow-lg hover:opacity-80 transition">
-    SDK
-  </button>
+        <Link to="/python-sdk" className="w-full sm:w-[180px] px-6 py-2 text-white text-lg font-medium rounded-full bg-gradient-to-r from-[#B20CC1] to-[#0D041F] shadow-lg hover:opacity-80 transition">
+          SDK
+        </Link>
 
-  <button className="w-full sm:w-[180px] px-6 py-2 text-white text-lg font-medium rounded-full bg-gradient-to-r from-[#B20CC1] to-[#0D041F] shadow-lg hover:opacity-80 transition">
-    Help
-  </button>
-</div>
+        <Link to="/help" className="w-full sm:w-[180px] px-6 py-2 text-white text-lg font-medium rounded-full bg-gradient-to-r from-[#B20CC1] to-[#0D041F] shadow-lg hover:opacity-80 transition">
+          Help
+        </Link>
+      </div>
     </div>
   );
 };

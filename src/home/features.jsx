@@ -8,21 +8,21 @@ import Heading from "../common/Heading";
 export default function Features() {
   const features = [
     {
-      title: "Create, launch, and chain AI agents effortlessly",
+      title: "Build, Launch & Connect AI Agents—Effortlessly",
       description:
-        "Serverless AI agent deployment happens in the cloud, enabling users to create and manage AI workflows without server infrastructure.",
+        "Instantly deploy AI agents in the cloud—no servers, no complexity. Design and manage AI workflows seamlessly, without the hassle of infrastructure.",
       image: "/images/feature1.png",
     },
     {
-      title: "Create, launch, and chain AI agents effortlessly",
+      title: "Design, Deploy & Automate AI Agents—No Servers Needed",
       description:
-        "Serverless AI agent deployment happens in the cloud, enabling users to create and manage AI workflows without server infrastructure.",
+        "Create and manage AI workflows effortlessly in the cloud. No server maintenance, no friction—just instant AI automation at your fingertips.",
         image: "/images/feature1.png",
     },
     {
-      title: "Create, launch, and chain AI agents effortlessly",
+      title: "Launch AI Agents in Seconds—Scalable, Server-Free, Seamless",
       description:
-        "Serverless AI agent deployment happens in the cloud, enabling users to create and manage AI workflows without server infrastructure.",
+        "Skip the infrastructure headaches. Deploy AI agents instantly in the cloud and build powerful automation workflows with zero setup required.",
         image: "/images/feature1.png",
     },
   ];

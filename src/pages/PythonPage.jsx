@@ -93,7 +93,7 @@ const PythonPage = () => {
       <Header />
       <div className="flex ">
         <LeftSidebar data={data}/>
-        <main className="flex-1  mr-64">
+        <main className="flex-1  lg:mr-64 w-full lg:w-auto">
           {(path === "/python-sdk/" || path === "/python-sdk") && (
             <Introduction />
           )}
