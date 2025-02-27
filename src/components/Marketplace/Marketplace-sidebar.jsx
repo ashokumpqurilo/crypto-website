@@ -2,12 +2,11 @@ import { FaPlus, FaRobot, FaDatabase, FaShoppingCart, FaBook, FaBars } from "rea
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function MarketplaceSidebar() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+export default function MarketplaceSidebar({isCollapsed,setIsCollapsed}) {
   const [isDocsOpen, setIsDocsOpen] = useState(false);
 const navigate = useNavigate();
   return (
-    <div className={`h-screen text-black p-4 transition-all duration-300 ${isCollapsed ? 'w-16' : 'w-64'}`}>
+    <div className={`h-screen absolute lg:static  bg-white   text-black p-4 transition-all duration-300 ${isCollapsed ? 'w-16' : 'w-64'}`}>
       <button onClick={() => setIsCollapsed(!isCollapsed)} className="mb-4 text-black hover:text-blue-400">
         <FaBars size={24} />
       </button> 
@@ -15,10 +14,10 @@ const navigate = useNavigate();
       <nav className="mt-4">
         <div className="mb-2">
           <p className={`text-gray-400 mb-3 ${isCollapsed ? 'hidden' : ''}`}>Agents</p>
-          <button className="flex items-center gap-2 text-black hover:text-blue-400" onClick={()=>navigate('/market-place/agents')}>
+          <button className="flex items-center gap-2 text-black hover:text-blue-400" onClick={()=>navigate('/market-place/create-agent')}>
             <FaPlus /> {!isCollapsed && "Create an Agent"}
           </button>
-          <button className="flex items-center gap-2 text-black hover:text-blue-400 mt-2" onClick={()=>navigate('/market-place/')}>
+          <button className="flex items-center gap-2 text-black hover:text-blue-400 mt-2" onClick={()=>navigate('/market-place/agent')}>
             <FaRobot /> {!isCollapsed && "My Agents"}
           </button>
         </div>
@@ -28,7 +27,7 @@ const navigate = useNavigate();
           <button className="flex items-center gap-2 text-black hover:text-blue-400" onClick={()=>navigate('/market-place/create-store')} >
             <FaPlus /> {!isCollapsed && "Create a Store"}
           </button>
-          <button className="flex items-center gap-2 text-black hover:text-blue-400 mt-2" onClick={()=>navigate('/market-place/store')}>
+          <button className="flex items-center gap-2 text-black hover:text-blue-400 mt-2" onClick={()=>navigate('/market-place/stores')}>
             <FaDatabase /> {!isCollapsed && "My Stores"}
           </button>
         </div>
@@ -38,14 +37,14 @@ const navigate = useNavigate();
           <button className="flex items-center gap-2 text-black hover:text-blue-400" onClick={()=>navigate('/market-place/create-vector-store/')}>
             <FaPlus /> {!isCollapsed && "Create a Vector Store"}
           </button>
-          <button className="flex items-center gap-2 text-black hover:text-blue-400 mt-2" onClick={()=>navigate('/vectorstore')}>
+          <button className="flex items-center gap-2 text-black hover:text-blue-400 mt-2" onClick={()=>navigate('/market-place/vector-store/')}>
             <FaDatabase /> {!isCollapsed && "My Vector Stores"}
           </button>
         </div>
-        
+
         <div className="mb-2">
           <p className={`text-gray-400 mb-3 ${isCollapsed ? 'hidden' : ''}`}>Explore</p>
-          <button className="flex items-center gap-2 text-black hover:text-blue-400" onClick={()=>navigate('/marketePlace')}>
+          <button className="flex items-center gap-2 text-black hover:text-blue-400" onClick={()=>navigate('/market-place/all')}>
             <FaShoppingCart /> {!isCollapsed && "Marketplace"}
           </button>
         </div>

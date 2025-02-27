@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_Route } from '../api/ApiRoute';
 // import { useRouter } from 'next/router';
 
 export default function Login() {
@@ -10,18 +11,18 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch(`${API_Route}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
       });
-      
       const data = await response.json();
-      if (response.ok) {
+      console.log(data)
+      if(data.status == "success"){
         localStorage.setItem('token', data.token);
-        navigate('market-place');
-      } else {
-        alert(data.message);
+        navigate('/market-place');
+      }else{
+        alert(data.message)
       }
     } catch (error) {
       console.error('Login failed', error);
@@ -29,14 +30,11 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-cover bg-center relative" 
-      style={{ backgroundImage: "url('https://source.unsplash.com/random/1600x900?technology')" }}>
-      
-      <div className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm"></div>
-      
+    <div className="flex items-center justify-center min-h-screen bg-cover bg-center relative bg-black bg-opacity-60 backdrop-blur-sm " 
+     >
+     
       <div className="relative bg-white/10 backdrop-blur-lg p-8 rounded-xl shadow-xl w-full max-w-md border border-white/20">
         <h2 className="text-white text-2xl font-semibold text-center mb-6">Welcome Back</h2>
-        
         <form onSubmit={handleLogin}>
           <input
             type="email"
