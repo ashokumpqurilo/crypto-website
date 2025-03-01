@@ -11,13 +11,12 @@ import Listallagentbuilderjobs from './components/ApiReference/Resources/AgentBu
 import GettingStarted from './pages/GettingStarted'
 import DataStorage from './pages/DataStorage'
 import 'react-tooltip/dist/react-tooltip.css'
-
 import TemplateView from './components/Marketplace/templateView'
-import PythonPage from './Pages/PythonPage'
 import Resources from './pages/Resources'
 import MarketPlace from './pages/marketPlace'
 import ApiReference from './pages/ApiReference'
 import ProtectedRoute from './auth/ProtectedRoute'
+import PythonPage from './pages/PythonPage'
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
